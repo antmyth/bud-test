@@ -20,10 +20,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/issues/">All Issues</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Reload data</a>
-                </li>
-                <li class="nav-item dropdown">
+                </li> -->
+                <!-- <li class="nav-item dropdown">
                     <a
                         class="nav-link dropdown-toggle"
                         href="#"
@@ -44,7 +44,7 @@
                         <a class="dropdown-item" href="#">Something else here</a
                         >
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
