@@ -2,6 +2,7 @@ package data
 
 import (
 	"encoding/json"
+	"log"
 	"sort"
 
 	commonfunctions "github.com/antmyth/buddy/internal/common-functions"
@@ -11,8 +12,13 @@ const fileLocation = "/Users/antonionascimento/dev/sandboxes/go-sandbox/comix-ut
 
 func New() *ComicsLib {
 	res := ComicsLib{}
-	LoadLibraryData(&res)
-	series := res.SeriesList
+	return res.Reload()
+}
+
+func (lib ComicsLib) Reload() *ComicsLib {
+	log.Printf("Reloading ComicsDB from file?%s\n", fileLocation)
+	LoadLibraryData(&lib)
+	series := lib.SeriesList
 	sort.SliceStable(series, func(i, j int) bool {
 		if series[i].Series < series[j].Series {
 			return true
@@ -22,8 +28,7 @@ func New() *ComicsLib {
 			return series[i].Volume < series[j].Volume
 		}
 	})
-
-	return &res
+	return &lib
 }
 
 type ComicsLib struct {
