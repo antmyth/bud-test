@@ -14,24 +14,24 @@
     <div
       class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6  g-2"
     >
-      {#each series as issue, i}
+      {#each series as ser, i}
         <div class="col">
           <div class="card shadow-sm">
-            <a href="../series/{i}">
+            <a href="../series/{ser["id"]}">
               <img
                 class="card-img-top"
                 style="height: 20rem; object-fit:contain;"
-                src={issue["image"]["small_url"]}
-                alt={issue["image"]["small_url"]}
+                src={ser["image"]["small_url"]}
+                alt={ser["image"]["small_url"]}
                 preserveAspectRatio="xMidYMid slice"
               />
             </a>
             <div class="card-body">
               <h5 class="card-title" style="height: 5rem;">
-                {issue["series"]}
+                {ser["series"]}
               </h5>
               <h6 class="card-subtitle mb-2 text-muted" style="height: 2rem;">
-                {issue["volume"]} - {issue["publisher"]}
+                {ser["volume"]} - {ser["publisher"]}
               </h6>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -41,7 +41,7 @@
                   >
                 </div>
                 <small class="text-muted"
-                  >{issue["count"]}/{issue["totalcount"]}</small
+                  >{ser["count"]}/{ser["totalcount"]}</small
                 >
               </div>
             </div>
