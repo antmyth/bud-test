@@ -5,12 +5,21 @@
 </script>
 
 <Head />
-<Navbar />
-
-<h1>All Series</h1>
-
+<Navbar title={"Series"}/>
 <div class="container-fluid">
-  <div class="album py-5 bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="../series?page=0&size=300">1</a></li>
+      <li class="page-item"><a class="page-link" href="../series?page=1&size=300">2</a></li>
+      <li class="page-item"><a class="page-link" href="../series?page=2&size=300">3</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<div class="container-fluid" style="overflow-y: scroll; height: 50rem;">
+  <div class="album py-2 bg-light">
     <div
       class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6  g-2"
     >
@@ -36,7 +45,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a
-                    href="../series/{i}"
+                    href="../series/{ser["id"]}"
                     class="btn btn-sm btn-outline-secondary">Details</a
                   >
                 </div>

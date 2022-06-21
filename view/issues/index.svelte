@@ -5,7 +5,7 @@
 </script>
 
 <Head />
-<Navbar />
+<Navbar title={"Issues"}/>
 
 <div class="album py-5 bg-light">
   <div class="container">

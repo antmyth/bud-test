@@ -1,6 +1,10 @@
+<script>
+    export let title;
+</script>
+
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/series/">Navbar</a>
+        <a class="navbar-brand" href=".">{title}</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -19,6 +23,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/issues/">All Issues</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/publishers/">All Publishers</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Reload data</a>

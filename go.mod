@@ -3,7 +3,7 @@ module github.com/antmyth/buddy
 go 1.18
 
 require (
-	github.com/antmyth/comix-lib v0.0.2
+	github.com/antmyth/comix-lib v0.0.8
 	github.com/livebud/bud v0.1.4
 )
 

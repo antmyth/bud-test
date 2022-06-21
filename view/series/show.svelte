@@ -6,9 +6,9 @@
 </script>
 
 <Head />
-<Navbar />
+<Navbar title={"Series Detail"}/>
 
-<div class="container border">
+<div class="container border" style="overflow-y: scroll; height: 90rem;">
   <div class="row border">
     <div class="col border">
       <img
@@ -32,7 +32,7 @@
           <h3>{series["publisher"]}</h3>
         </div>
         <div class="w-100" />
-        <div class="col border bg-light">
+        <div class="col border bg-light"  style="overflow-y: scroll; height: 25rem;">
           <p>{@html series["description"]}</p>
         </div>
         <div class="w-100" />
@@ -63,7 +63,3 @@
     {/each}
   </div>
 </div>
-
-<br />
-
-<a href="../series">Back</a>

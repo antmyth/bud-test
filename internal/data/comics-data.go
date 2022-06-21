@@ -32,3 +32,11 @@ func AsIssuesPointers(issues []v.Issue) []*v.Issue {
 	}
 	return res
 }
+
+func AsPublishersPointers(publishers []v.Publisher) []*v.Publisher {
+	res := make([]*v.Publisher, len(publishers))
+	for i := range publishers {
+		res[i] = &publishers[i]
+	}
+	return res
+}

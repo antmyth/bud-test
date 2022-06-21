@@ -16,8 +16,16 @@ type Controller struct {
 
 // Index of series
 // GET /series/
-func (c *Controller) Index(ctx context.Context, reload *bool) (series []*v.Series, err error) {
-	ss := c.Comics.GetAllSeries()
+func (c *Controller) Index(ctx context.Context, page *int, size *int) (series []*v.Series, err error) {
+	pg := 0
+	if page != nil {
+		pg = *page
+	}
+	sz := 100
+	if size != nil {
+		sz = *size
+	}
+	ss := c.Comics.GetAllSeriesPaginated(pg, sz)
 	out := data.AsSeriesPointers(ss)
 	return out, nil
 }
